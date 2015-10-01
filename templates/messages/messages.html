@@ -1,0 +1,57 @@
+<md-content flex
+    layout="row"
+    md-theme="teal">
+    
+    <md-content class="app-toolbar-container"
+        flex
+        layout="column">
+        <md-toolbar class="md-whiteframe-z2">
+            <div class="md-toolbar-tools">
+               <md-button class="md-icon-button"
+                    ng-click="back()">
+                    <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
+                    <md-icon>arrow_back</md-icon>
+                </md-button>
+                <h2 class="md-title">{{ 'title_message' | translate }}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button"
+                    ng-click="messages()">
+                    <md-tooltip>{{ 'action_message' | translate }}</md-tooltip>
+                    <md-icon>person_add</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-tabs flex
+            md-stretch-tabs="auto"
+            md-swipe-content="true"
+            panel panel-default position-fixed>
+            <md-tab>
+            <md-icon>call</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
+            </md-tab>
+
+            <md-tab>
+            <md-icon>chats</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
+            </md-tab>
+            
+            <md-tab>
+            <md-icon>contacts</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</md-content>

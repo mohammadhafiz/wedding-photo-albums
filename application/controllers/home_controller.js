@@ -1,17 +1,7 @@
-application.controller('HomeController', ['$mdSidenav', '$scope',
-    function($mdSidenav, $scope)
+application.controller('HomeController', ['$scope', '$location',
+    function($scope, $location)
     {
         $scope.theme = 'teal';
-
-        $scope.close = function()
-        {
-            $mdSidenav('menu').close();
-        };
-
-        $scope.menu = function()
-        {
-            $mdSidenav('menu').open();
-        };
 
         $scope.query = {
             username: '',
@@ -21,4 +11,10 @@ application.controller('HomeController', ['$mdSidenav', '$scope',
         {
             $scope.query.$ = '';
         };
+        
+        $scope.messages = function()
+        {
+            $location.path('/messages');
+        };
+        
     }]);

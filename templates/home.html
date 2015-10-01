@@ -1,48 +1,87 @@
 <md-content flex
     layout="row"
     md-theme="teal">
+    
     <md-content class="app-toolbar-container"
         flex
         layout="column">
         <md-toolbar class="md-whiteframe-z2">
+            <div class="md-toolbar-tools">
+                <h2 class="md-title">{{ 'title_photo_albums' | translate }}</h2>
+                <span flex></span>
                 <md-button class="md-icon-button"
-                    ng-click="delete($event, user)">
-                    <md-tooltip>{{ 'action_delete' | translate }}</md-tooltip>
-                    <md-icon>delete</md-icon>
+                    ng-click="messages()">
+                    <md-tooltip>{{ 'action_message' | translate }}</md-tooltip>
+                    <md-icon>message</md-icon>
                 </md-button>
             </div>
         </md-toolbar>
 
-        <md-tabs flex
+        <md-tabs flex 
             md-stretch-tabs="auto"
             md-swipe-content="true">
             <md-tab>
-            <md-icon>home</md-icon>
-                <md-list>
-                </md-list>
+            <md-tab-label>
+              <md-icon>home</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+                <md-grid-list
+                    flex-gt-sm="90"
+                    flex-gt-md="80"
+                    flex-gt-lg="70"
+                    md-cols="1"
+                    md-cols-gt-sm="10"
+                    md-cols-gt-md="4"
+                    md-gutter="0px"
+                    md-row-height="2:1">
+                    <md-grid-tile
+                        class="app-background-white app-pointer" 
+                        no-repeat>
+                        <img ng-src="">
+                        <md-grid-tile-footer>
+                            <md-icon ng-click="like()">favorite_border</md-icon>
+                            <md-icon ng-click="comment()">comment</md-icon>
+                            {{comment}}
+                        </md-grid-tile-footer>
+                    </md-grid-tile>
+                </md-grid-list>
+            </md-tab-body>
             </md-tab>
 
             <md-tab>
-            <md-icon>search</md-icon>
-                <md-list>
-                </md-list>
+            <md-tab-label>
+              <md-icon>search</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+              Lorem
+            </md-tab-body>
             </md-tab>
             
             <md-tab>
-            <md-icon>photo_camera</md-icon>
-                <md-list>
-                </md-list>
+            <md-tab-label>
+              <md-icon>photo_camera</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+              Lorem
+            </md-tab-body>
             </md-tab>
             
             <md-tab>
-            <md-icon>favorite_border</md-icon>
-                <md-list>
-                </md-list>
+            <md-tab-label>
+              <md-icon>favorite_border</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+              Lorem
+            </md-tab-body>
             </md-tab>
+            
             <md-tab>
-            <md-icon>person</md-icon>
-                <md-list>
-                </md-list>
+            <md-tab-label>
+              <md-icon>person</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+              Lorem
+            </md-tab-body>
             </md-tab>
         </md-tabs>
     </md-content>

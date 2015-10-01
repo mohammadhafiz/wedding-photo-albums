@@ -8,14 +8,15 @@ application.config(['$translateProvider',
             'action_details': 'Details',
             'action_email': 'Email',
             'action_menu': 'Menu',
+            'action_message': 'Messages',
             'action_notifications': 'Notifications',
             'action_person': 'Person',
             'action_reset': 'Reset',
             'action_search': 'Search',
             'action_shopping_cart': 'Shopping Cart',
             
-            'title_wedding_photo_albums': 'Wedding Photo Albums',
-
+            'title_photo_albums': 'Photo Albums',
+            'title_message': 'Messages',
 
             'toast_incorrect_credentials': 'The user credentials is incorrect.',
             'toast_invalid_refresh_token': 'The refresh token is invalid.',

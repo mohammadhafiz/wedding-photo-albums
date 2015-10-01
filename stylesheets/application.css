@@ -70,3 +70,9 @@ md-sidenav .md-button {
 	display: block;
 	margin: auto;
 }
+
+md-tab-item {
+  md-icon {
+    color: inherit;
+  }
+}
