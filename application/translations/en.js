@@ -3,6 +3,7 @@ application.config(['$translateProvider',
     {
         $translateProvider.translations('en', {
             
+            'action_add_person': 'Add Friend',
             'action_back': 'Back',
             'action_comment': 'Comment',
             'action_details': 'Details',
@@ -15,7 +16,8 @@ application.config(['$translateProvider',
             'action_search': 'Search',
             'action_shopping_cart': 'Shopping Cart',
             
-            'title_photo_albums': 'Photo Albums',
+            'title_add_friend': 'Add Friends',
+            'title_chatters': 'Chatters',
             'title_message': 'Messages',
 
             'toast_incorrect_credentials': 'The user credentials is incorrect.',

@@ -12,17 +12,12 @@
                     <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
                     <md-icon>arrow_back</md-icon>
                 </md-button>
-                <h2 class="md-title">{{ 'title_message' | translate }}</h2>
+                <h2 class="md-title">{{ 'title_add_friend' | translate }}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button"
                     ng-click="$parent.theme = 'grey'">
                     <md-tooltip>{{ 'action_search' | translate }}</md-tooltip>
                     <md-icon>search</md-icon>
-                </md-button>
-                <md-button class="md-icon-button"
-                    ng-click="add()">
-                    <md-tooltip>{{ 'action_add_person' | translate }}</md-tooltip>
-                    <md-icon>add</md-icon>
                 </md-button>
             </div>
             
@@ -51,54 +46,39 @@
             md-swipe-content="true"
             panel panel-default position-fixed>
             <md-tab>
-            <md-tab-label>
-              <md-icon>chat</md-icon>
-            </md-tab-label>
-            <md-tab-body>
-            <center>
-                <form>
-                    <div class="input-group">
-                    <md-content style="height: 500px;">
-                        <section>
-                          <md-subheader class="md-primary">Unread Messages</md-subheader>
-                          <md-list layout-padding>
-                            <md-list-item class="md-3-line" ng-repeat="message in messages">
-                                <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-                                <div class="md-list-item-text">
-                                {{text}}
-                                </div>
-                            </md-list-item>
-                          </md-list>
-                        </section>
-                    </md-content>
-            </center>
-                      <md-divider ></md-divider>
-                      <br>
-                        <input type="text" class="ta2"/>
-                        <span class="input-group-btn">
-                            <md-button class="md-raised md-primary">Send</md-button>
-                        </span>
-                    </div>
-                </form>
-            </md-tab-body>
+            <md-icon>chat_bubble</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
+            </md-tab>
+
+            <md-tab>
+            <md-icon>person_add</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
             </md-tab>
             
             <md-tab>
-            <md-tab-label>
-              <md-icon>call</md-icon>
-            </md-tab-label>
-            <md-tab-body>
-              Call
-            </md-tab-body>
+            <md-icon>pages</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
             </md-tab>
-            
+                        
             <md-tab>
-            <md-tab-label>
-              <md-icon>contacts</md-icon>
-            </md-tab-label>
-            <md-tab-body>
-              Contacts
-            </md-tab-body>
+            <md-icon>help</md-icon>
+                <md-list>
+                    <md-list-item class="md-2-line"
+                        md-ink-ripple>
+                    </md-list-item>
+                </md-list>
             </md-tab>
         </md-tabs>
     </md-content>

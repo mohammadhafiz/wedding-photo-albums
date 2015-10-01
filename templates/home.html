@@ -2,17 +2,41 @@
     layout="row"
     md-theme="teal">
     
-    <md-content class="app-toolbar-container"
-        flex
+    <md-content flex
         layout="column">
-        <md-toolbar class="md-whiteframe-z2">
-            <div class="md-toolbar-tools">
-                <h2 class="md-title">{{ 'title_photo_albums' | translate }}</h2>
+        <md-toolbar class="app-toolbar md-whiteframe-z2"
+            ng-animate="animate">
+            <div class="md-toolbar-tools" ng-if="theme == 'teal'">
+                <h2 class="md-title">{{ 'title_chatters' | translate }}</h2>
                 <span flex></span>
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'grey'">
+                    <md-tooltip>{{ 'action_search' | translate }}</md-tooltip>
+                    <md-icon>search</md-icon>
+                </md-button>
                 <md-button class="md-icon-button"
                     ng-click="messages()">
                     <md-tooltip>{{ 'action_message' | translate }}</md-tooltip>
                     <md-icon>message</md-icon>
+                </md-button>
+            </div>
+            
+            <div class="md-toolbar-tools" ng-if="theme == 'grey'">
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'teal'">
+                    <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
+                    <md-icon>arrow_back</md-icon>
+                </md-button>
+                <md-input-container flex md-no-float>
+                    <br>
+                    <input ng-model="$parent.query.$"
+                        placeholder="{{ 'action_search' | translate }}"
+                        type="search">
+                </md-input-container>
+                <md-button class="md-icon-button"
+                    ng-click="reset()">
+                    <md-tooltip>{{ 'action_reset' | translate }}</md-tooltip>
+                    <md-icon>cancel</md-icon>
                 </md-button>
             </div>
         </md-toolbar>
@@ -48,12 +72,13 @@
             </md-tab-body>
             </md-tab>
 
+
             <md-tab>
             <md-tab-label>
-              <md-icon>search</md-icon>
+              <md-icon>toys</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Lorem
+              Moment
             </md-tab-body>
             </md-tab>
             
@@ -62,16 +87,16 @@
               <md-icon>photo_camera</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Lorem
+              Take Picture
             </md-tab-body>
             </md-tab>
             
             <md-tab>
             <md-tab-label>
-              <md-icon>favorite_border</md-icon>
+              <md-icon>favorite</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Lorem
+              Like
             </md-tab-body>
             </md-tab>
             
@@ -80,7 +105,7 @@
               <md-icon>person</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Lorem
+              Profile
             </md-tab-body>
             </md-tab>
         </md-tabs>

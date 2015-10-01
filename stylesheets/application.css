@@ -76,3 +76,10 @@ md-tab-item {
     color: inherit;
   }
 }
+
+.ta2 {
+	width:230px;
+	height:60px;
+	background-color:#99FFCC;
+	border:1px solid #008800;
+}

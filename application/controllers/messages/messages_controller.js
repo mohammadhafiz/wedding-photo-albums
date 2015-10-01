@@ -17,6 +17,11 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
             $location.path('/home');
         };
         
+        $scope.add = function()
+        {
+            $location.path('/addFriends');
+        };
+        
         $scope.close = function()
         {
             $mdSidenav('friends').close();
