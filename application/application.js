@@ -97,6 +97,6 @@ application.config(['$locationProvider', '$routeProvider',
             .hashPrefix('!#');
 
         $routeProvider.otherwise({
-                redirectTo: '/dashboard',
+                redirectTo: '/login',
             });
     }]);
