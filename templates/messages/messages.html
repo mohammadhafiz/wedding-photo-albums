@@ -55,31 +55,25 @@
               <md-icon>chat</md-icon>
             </md-tab-label>
             <md-tab-body>
-            <center>
-                <form>
-                    <div class="input-group">
-                    <md-content style="height: 500px;">
-                        <section>
-                          <md-subheader class="md-primary">Unread Messages</md-subheader>
-                          <md-list layout-padding>
-                            <md-list-item class="md-3-line" ng-repeat="message in messages">
-                                <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-                                <div class="md-list-item-text">
-                                {{text}}
-                                </div>
-                            </md-list-item>
-                          </md-list>
-                        </section>
-                    </md-content>
-            </center>
-                      <md-divider ></md-divider>
-                      <br>
-                        <input type="text" class="ta2"/>
-                        <span class="input-group-btn">
-                            <md-button class="md-raised md-primary">Send</md-button>
-                        </span>
+            <br>
+                <div>
+                    <center>
+                    <form ng-submit="todoAdd()">
+                    <div ng-repeat="x in todoList">
+                        {{ x.todoText }}
                     </div>
-                </form>
+                    <md-divider ></md-divider>
+                        <md-input-container style="width:100%" default>
+                            <label>Text</label>
+                            <input ng-model="todoInput">
+                        </md-input-container>
+                        <md-button class="md-raised md-primary" ng-click="submit()">Send</md-button>
+                        <md-button class="md-raised md-primary" ng-click="remove()">Delete</md-button>
+                    </form>
+                    <br>
+                        
+                    </center>
+                </div>
             </md-tab-body>
             </md-tab>
             
