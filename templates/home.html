@@ -1,0 +1,52 @@
+<md-content flex
+    layout="row"
+    md-swipe-left="close()"
+    md-swipe-right="menu()"
+    md-theme="{{ theme }}">
+
+    <md-content flex
+        layout="column">
+        <md-toolbar class="app-toolbar md-whiteframe-z2"
+            ng-animate="animate">
+            <div class="md-toolbar-tools" ng-if="theme == 'teal'">
+                <md-button class="md-icon-button"
+                    hide-gt-md
+                    ng-click="menu()">
+                    <md-tooltip>{{ 'action_menu' | translate }}</md-tooltip>
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <h2 class="md-title">{{ 'title_wedding_photo_albums' | translate }}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'white'">
+                    <md-tooltip>{{ 'action_search' | translate }}</md-tooltip>
+                    <md-icon>search</md-icon>
+                </md-button>
+                <md-button class="md-icon-button"
+                    ng-click="create()">
+                    <md-tooltip>{{ 'action_create_user' | translate }}</md-tooltip>
+                    <md-icon>person_add</md-icon>
+                </md-button>
+            </div>
+
+            <div class="md-toolbar-tools" ng-if="theme == 'white'">
+                <md-button class="md-icon-button"
+                    ng-click="$parent.theme = 'teal'">
+                    <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
+                    <md-icon>arrow_back</md-icon>
+                </md-button>
+                <md-input-container flex md-no-float>
+                    <br>
+                    <input ng-model="$parent.query.username"
+                        placeholder="{{ 'action_search' | translate }}"
+                        type="search">
+                </md-input-container>
+                <md-button class="md-icon-button"
+                    ng-click="reset()">
+                    <md-tooltip>{{ 'action_reset' | translate }}</md-tooltip>
+                    <md-icon>cancel</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+    </md-content>
+</md-content>

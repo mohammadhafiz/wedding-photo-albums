@@ -2,9 +2,9 @@ application.config(['$routeProvider',
     function($routeProvider)
     {
         $routeProvider
-            .when('/login', {
-                controller: 'LoginController',
-                templateUrl: 'login.html',
+            .when('/home', {
+                controller: 'HomeController',
+                templateUrl: 'home.html',
                 resolve: {
                     isGuest: ['Auth', function(Auth)
                     {
