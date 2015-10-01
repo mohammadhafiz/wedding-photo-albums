@@ -1,0 +1,20 @@
+{
+  "name": "wedding photo albums",
+  "version": "0.0.0",
+  "authors": [
+    "mohammadhafiz <mohammadhafizamiruddin@gmail.com>"
+  ],
+  "description": "this application for store and restore the data of image full size.",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "wedding photo albums",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
