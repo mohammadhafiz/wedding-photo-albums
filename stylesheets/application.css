@@ -83,3 +83,9 @@ md-tab-item {
 	background-color:#99FFCC;
 	border:1px solid #008800;
 }
+
+.image.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  margin: 16px; }

@@ -45,4 +45,63 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
                 if (!x.done) $scope.todoList.push(x);
             });
         };
+        
+         var imagePath = 'images.jpg';
+            $scope.messages = [
+              {
+                face : imagePath,
+                no: '0123456789',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0132456789',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0172345689',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0142356789',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0162345987',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0123987654',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0193265487',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0129874563',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0162398745',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '014327895',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+              {
+                face : imagePath,
+                no: '0163294578',
+                notes: " I'll be in your neighborhood doing errands"
+              },
+            ];
     }]);

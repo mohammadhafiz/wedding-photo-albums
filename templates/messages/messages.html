@@ -82,7 +82,23 @@
               <md-icon>call</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Call
+              <div>
+                  <md-content>
+                    <section>
+                      <md-list layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="message in messages">
+                            <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.no}}">
+                            <div class="md-list-item-text">
+                              <h4>{{message.no}}</h4>
+                              <p>
+                                {{message.notes}}
+                              </p>
+                            </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
+                </div>
             </md-tab-body>
             </md-tab>
             
