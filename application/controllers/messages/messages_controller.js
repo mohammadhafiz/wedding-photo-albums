@@ -26,13 +26,17 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
         {
             $mdSidenav('friends').close();
         };        
+        
         $scope.friends = function()
         {
             $mdSidenav('friends').open();
         };
         
+        $scope.todoList = [{todoText:$scope.todoInput, done:false}];
+
         $scope.todoAdd = function() {
-            $scope.todoList.push({todoText:});
+            $scope.todoList.push({todoText:$scope.todoInput, done:false});
+            $scope.todoInput = "";
         };
 
         $scope.remove = function() {
