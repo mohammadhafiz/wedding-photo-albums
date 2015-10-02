@@ -48,8 +48,7 @@
 
         <md-tabs flex
             md-stretch-tabs="auto"
-            md-swipe-content="true"
-            panel panel-default position-fixed>
+            md-swipe-content="true">
             <md-tab>
             <md-tab-label>
               <md-icon>chat</md-icon>
@@ -86,12 +85,12 @@
                   <md-content>
                     <section>
                       <md-list layout-padding>
-                        <md-list-item class="md-3-line" ng-repeat="message in messages">
-                            <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.no}}">
+                        <md-list-item class="md-3-line" ng-repeat="message in messages"  ng-click="test()">
+                            <img ng-src="{{message.face}}" class="md-avatar">
                             <div class="md-list-item-text">
                               <h4>{{message.no}}</h4>
                               <p>
-                                {{message.notes}}
+                                {{message.dates}} {{message.times}}
                               </p>
                             </div>
                         </md-list-item>
@@ -107,7 +106,23 @@
               <md-icon>contacts</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Contacts
+              <div>
+                  <md-content>
+                    <section>
+                      <md-list layout="column" layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="message in messages" ng-click="test()">
+                          <img ng-src="{{message.face}}" class="md-avatar">
+                          <div class="md-list-item-text">
+                            <h4>{{message.no}}</h4>
+                            <p>
+                              {{message.notes}}
+                            </p>
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
+                </div>
             </md-tab-body>
             </md-tab>
         </md-tabs>
