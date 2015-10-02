@@ -49,6 +49,7 @@
               <md-icon>home</md-icon>
             </md-tab-label>
             <md-tab-body>
+            <md-divider></md-divider>
                 <md-grid-list
                     flex-gt-sm="90"
                     flex-gt-md="80"
@@ -77,7 +78,35 @@
               <md-icon>toys</md-icon>
             </md-tab-label>
             <md-tab-body>
-              Moment
+              <div>
+              <md-divider></md-divider>
+                  <md-button class="md-icon-button"
+                      ng-click="image()">
+                      <md-tooltip>{{ 'action_text' | translate }}</md-tooltip>
+                      <md-icon>textsms</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button"
+                      ng-click="image()">
+                      <md-tooltip>{{ 'action_image' | translate }}</md-tooltip>
+                      <md-icon>image</md-icon>
+                  </md-button>
+                  <md-content>
+                    <section>
+                      <md-list layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="message in messages"  ng-click="test()">
+                            <img ng-src="{{message.face}}" class="md-avatar">
+                            <div class="md-list-item-text">
+                              <h4>{{message.name}}</h4>
+                              <h4>{{message.notes}}</h4>
+                              <p>
+                                {{message.image}}
+                              </p>
+                            </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
+                </div>
             </md-tab-body>
             </md-tab>
             
@@ -86,6 +115,7 @@
               <md-icon>photo_camera</md-icon>
             </md-tab-label>
             <md-tab-body>
+            <md-divider></md-divider>
               Take Picture
             </md-tab-body>
             </md-tab>
@@ -95,6 +125,7 @@
               <md-icon>favorite</md-icon>
             </md-tab-label>
             <md-tab-body>
+            <md-divider></md-divider>
               Like
             </md-tab-body>
             </md-tab>
@@ -104,6 +135,7 @@
               <md-icon>person</md-icon>
             </md-tab-label>
             <md-tab-body>
+            <md-divider></md-divider>
               Profile
             </md-tab-body>
             </md-tab>
