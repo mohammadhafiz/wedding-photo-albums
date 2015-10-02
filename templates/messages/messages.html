@@ -56,21 +56,24 @@
             <md-tab-body>
             <br>
                 <div>
-                    <center>
                     <form ng-submit="todoAdd()">
-                    <div ng-repeat="x in todoList">
-                        {{ x.todoText }}
-                    </div>
+                    <section>
+                      <md-list layout-padding>
+                          <div ng-repeat="x in todoList">
+                              {{ x.todoText }}
+                          </div>
+                      </md-list>
+                    </section>
+                    <span flex></span>
+                    <center>
                     <md-divider ></md-divider>
                         <md-input-container style="width:100%" default>
-                            <label>Text</label>
+                            <label>Messages</label>
                             <input ng-model="todoInput">
                         </md-input-container>
                         <md-button class="md-raised md-primary" ng-click="submit()">Send</md-button>
-                        <md-button class="md-raised md-primary" ng-click="remove()">Delete</md-button>
                     </form>
-                    <br>
-                        
+                    <br> 
                     </center>
                 </div>
             </md-tab-body>

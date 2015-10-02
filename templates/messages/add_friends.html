@@ -40,46 +40,27 @@
                 </md-button>
             </div>
         </md-toolbar>
-
-        <md-tabs flex
-            md-stretch-tabs="auto"
-            md-swipe-content="true"
-            panel panel-default position-fixed>
-            <md-tab>
-            <md-icon>chat_bubble</md-icon>
-                <md-list>
-                    <md-list-item class="md-2-line"
-                        md-ink-ripple>
-                    </md-list-item>
-                </md-list>
-            </md-tab>
-
-            <md-tab>
-            <md-icon>person_add</md-icon>
-                <md-list>
-                    <md-list-item class="md-2-line"
-                        md-ink-ripple>
-                    </md-list-item>
-                </md-list>
-            </md-tab>
-            
-            <md-tab>
-            <md-icon>pages</md-icon>
-                <md-list>
-                    <md-list-item class="md-2-line"
-                        md-ink-ripple>
-                    </md-list-item>
-                </md-list>
-            </md-tab>
-                        
-            <md-tab>
-            <md-icon>help</md-icon>
-                <md-list>
-                    <md-list-item class="md-2-line"
-                        md-ink-ripple>
-                    </md-list-item>
-                </md-list>
-            </md-tab>
-        </md-tabs>
+        
+        <div>
+           <md-button ng-click="test()">
+               <md-icon>group</md-icon> 
+               Group
+           </md-button>
+           <br>
+           <md-button ng-click="test()">
+               <md-icon>group</md-icon> 
+               Scan QR Code
+           </md-button>
+           <br>
+           <md-button ng-click="test()">
+               <md-icon>group</md-icon> 
+               Shake
+           </md-button>
+           <br>
+           <md-button ng-click="test()">
+               <md-icon>group</md-icon> 
+               People Nearby
+           </md-button>
+        </div>
     </md-content>
 </md-content>
