@@ -7,6 +7,7 @@ var application = angular.module('application', [
     'ngMessages',
     'ngResource',
     'ngRoute',
+    'yaru22.angular-timeago',
     'ngtimeago',
     'angularMoment', 
     'ngSanitize',

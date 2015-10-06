@@ -62,13 +62,18 @@
                             <li>
                             <img src="http://maxme-life.ru/tests/img1.jpg"/>
                             <div class="message">
-                            if you had the option of adopting a baby fox or baby koala, which one would you choose?</div>
+                            if you had the option of adopting a baby fox or baby koala, which one would you choose?
+                            <p> 3 minutes ago </p>
+                            </div>
                             </li>
                             
                             <li>
                               <img src="http://maxme-life.ru/tests/img2.jpg">
                               <div class="message" ng-repeat="chat in todoList">
-                              {{ chat.todoText }}<br>{{chat.created_at}}
+                              {{ chat.todoText }}
+                              <br>
+                              <br>
+                              {{chat.created_at | timeAgo}}
                               </div>
                             </li>
                          </ul>

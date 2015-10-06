@@ -34,7 +34,7 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
             $mdSidenav('friends').open();
         };
         
-        $scope.todoList = [{todoText:$scope.todoInput, created_at: Date.now()}];
+        $scope.todoList = [{todoText:'Clean House', created_at: Date.now()}];
 
         $scope.todoAdd = function() {
             $scope.todoList.push({todoText:$scope.todoInput, created_at: Date.now()});
