@@ -41,26 +41,22 @@
             </div>
         </md-toolbar>
         
-        <div>
-           <md-button ng-click="test()">
-               <md-icon>group</md-icon> 
-               Group
-           </md-button>
-           <br>
-           <md-button ng-click="test()">
-               <md-icon>group</md-icon> 
-               Scan QR Code
-           </md-button>
-           <br>
-           <md-button ng-click="test()">
-               <md-icon>group</md-icon> 
-               Shake
-           </md-button>
-           <br>
-           <md-button ng-click="test()">
-               <md-icon>group</md-icon> 
-               People Nearby
-           </md-button>
-        </div>
+              <div>
+                  <md-content>
+                    <section>
+                      <md-list layout="column" layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="message in messages" ng-click="test()">
+                          <img ng-src="http://maxme-life.ru/tests/img2.jpg"" class="md-avatar" alt="{{message.who}}">
+                          <div class="md-list-item-text">
+                            <h4>{{item.title}}</h4>
+                            <p>
+                              {{message.notes}}
+                            </p>
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
+                </div>
     </md-content>
 </md-content>

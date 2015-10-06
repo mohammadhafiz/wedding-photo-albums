@@ -7,6 +7,8 @@ var application = angular.module('application', [
     'ngMessages',
     'ngResource',
     'ngRoute',
+    'ngtimeago',
+    'angularMoment', 
     'ngSanitize',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache

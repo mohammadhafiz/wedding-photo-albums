@@ -7,7 +7,6 @@
         <md-toolbar class="app-toolbar md-whiteframe-z2"
             ng-animate="animate">
             <div class="md-toolbar-tools" ng-if="theme == 'teal'">
-                <h2 class="md-title">{{ 'title_chatters' | translate }}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button"
                     ng-click="$parent.theme = 'grey'">
@@ -93,13 +92,13 @@
                   <md-content>
                     <section>
                       <md-list layout-padding>
-                        <md-list-item class="md-3-line" ng-repeat="message in messages"  ng-click="test()">
-                            <img ng-src="{{message.face}}" class="md-avatar">
+                        <md-list-item class="md-3-line" ng-repeat="moment in moments" ng-click="test()">
+                            <img ng-src="http://maxme-life.ru/tests/img1.jpg"" class="md-avatar" alt="{{message.who}}">
                             <div class="md-list-item-text">
-                              <h4>{{message.name}}</h4>
-                              <h4>{{message.notes}}</h4>
+                              <h4 ng-click="test()">{{moment.name}}</h4>
+                              <h4>{{moment.notes}}</h4>
                               <p>
-                                {{message.image}}
+                                {{moment.image}}
                               </p>
                             </div>
                         </md-list-item>
@@ -109,24 +108,14 @@
                 </div>
             </md-tab-body>
             </md-tab>
-            
-            <md-tab>
-            <md-tab-label>
-              <md-icon>photo_camera</md-icon>
-            </md-tab-label>
-            <md-tab-body>
-            <md-divider></md-divider>
-              Take Picture
-            </md-tab-body>
-            </md-tab>
-            
+
             <md-tab>
             <md-tab-label>
               <md-icon>favorite</md-icon>
             </md-tab-label>
             <md-tab-body>
             <md-divider></md-divider>
-              Like
+              Notifications
             </md-tab-body>
             </md-tab>
             
@@ -136,7 +125,35 @@
             </md-tab-label>
             <md-tab-body>
             <md-divider></md-divider>
-              Profile
+                <div>
+                   <md-button ng-click="test()">
+                       <h4>Profile Picture</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>Full Name</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>Charters ID</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>My QR Code</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>Gender</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>Region</h4>
+                   </md-button>
+                   <br>
+                   <md-button ng-click="test()">
+                       <h4>Status</h4>
+                   </md-button>
+                </div>
             </md-tab-body>
             </md-tab>
         </md-tabs>

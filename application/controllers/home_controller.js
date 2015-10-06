@@ -17,8 +17,8 @@ application.controller('HomeController', ['$scope', '$location',
             $location.path('/messages');
         };
         
-        var imagePath = 'img/list/60.jpeg';
-            $scope.messages = [
+        var imagePath= 'images.jpg';
+            $scope.moments = [
               {
                 face : imagePath,
                 name: 'hafiz',

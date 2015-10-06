@@ -53,28 +53,28 @@
             <md-tab-label>
               <md-icon>chat</md-icon>
             </md-tab-label>
+            <md-divider></md-divider>
             <md-tab-body>
             <br>
-                <div>
-                <md-content style="height: 470px;">
-                    <section>
-                      <md-list layout-padding>
-                          <div ng-repeat="x in todoList">
-                              {{ x.todoText }}
-                          </div>
-                      </md-list>
-                    </section>
-                </md-content>   
-                
-                <span flex></span>
-                <md-divider></md-divider>
+                <div class="chat">
+                    <md-content style="height: 500px;">
+                        <ul>
+                            <li>
+                            <img src="http://maxme-life.ru/tests/img1.jpg"/>
+                            <div class="message">
+                            if you had the option of adopting a baby fox or baby koala, which one would you choose?</div>
+                            </li>
+                            
+                            <li>
+                              <img src="http://maxme-life.ru/tests/img2.jpg">
+                              <div class="message" ng-repeat="chat in todoList">
+                              {{ chat.todoText }}<br>{{chat.created_at}}
+                              </div>
+                            </li>
+                         </ul>
+                    </md-content>   
                     <form ng-submit="todoAdd()">
-                            <md-input-container style="width:100%" default>
-                                <img ng-src="{{message.face}}" class="md-avatar">
-                                <label>Type a messages</label>
-                                <input ng-model="todoInput">
-                            </md-input-container>
-                            <md-button class="md-raised md-primary" ng-click="submit()">Send</md-button>
+                         <input type="text" ng-model="todoInput" placeholder="text" /><button>send</button>
                     </form> 
                 </div>
             </md-tab-body>
@@ -89,10 +89,10 @@
                   <md-content>
                     <section>
                       <md-list layout-padding>
-                        <md-list-item class="md-3-line" ng-repeat="message in messages"  ng-click="test()">
-                            <img ng-src="{{message.face}}" class="md-avatar">
+                        <md-list-item class="md-3-line" ng-repeat="message in messages" ng-click="test()">
+                            <img ng-src="https://pbs.twimg.com/profile_images/1731485432/justin-profile-face.jpg"" class="md-avatar" alt="{{message.who}}">
                             <div class="md-list-item-text">
-                              <h4>{{message.no}}</h4>
+                              <h3>{{message.no}}</h3>
                               <p>
                                 {{message.dates}} {{message.times}}
                               </p>
@@ -115,7 +115,7 @@
                     <section>
                       <md-list layout="column" layout-padding>
                         <md-list-item class="md-3-line" ng-repeat="message in messages" ng-click="test()">
-                          <img ng-src="{{message.face}}" class="md-avatar">
+                          <img ng-src="http://maxme-life.ru/tests/img2.jpg"" class="md-avatar" alt="{{message.who}}">
                           <div class="md-list-item-text">
                             <h4>{{message.no}}</h4>
                             <p>

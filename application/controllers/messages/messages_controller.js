@@ -1,6 +1,8 @@
-application.controller('MessagesController', ['$location', '$mdSidenav', '$scope',
-    function($location, $mdSidenav, $scope)
+application.controller('MessagesController', ['$location', '$mdSidenav', '$scope', 'amTimeAgoConfig',
+    function($location, $mdSidenav, $scope, amTimeAgoConfig)
     {
+        withoutSuffix: true
+        
         $scope.theme = 'teal';
 
         $scope.query = {
@@ -32,21 +34,13 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
             $mdSidenav('friends').open();
         };
         
-        $scope.todoList = [{todoText:$scope.todoInput, done:false}];
+        $scope.todoList = [{todoText:$scope.todoInput, created_at: Date.now()}];
 
         $scope.todoAdd = function() {
-            $scope.todoList.push({todoText:$scope.todoInput, done:false});
+            $scope.todoList.push({todoText:$scope.todoInput, created_at: Date.now()});
             $scope.todoInput = "";
         };
 
-        $scope.remove = function() {
-            var oldList = $scope.todoList;
-            $scope.todoList = [];
-            angular.forEach(oldList, function(x) {
-                if (!x.done) $scope.todoList.push(x);
-            });
-        };
-        
          var imagePath = 'img/list/60.jpeg';
             $scope.messages = [
               {
