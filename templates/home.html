@@ -93,9 +93,9 @@
                     <section>
                       <md-list layout-padding>
                         <md-list-item class="md-3-line" ng-repeat="moment in moments" ng-click="test()">
-                            <img ng-src="http://maxme-life.ru/tests/img1.jpg"" class="md-avatar" alt="{{message.who}}">
+                            <img ng-src="http://www.lawyersweekly.com.au/images/LW_Media_Library/594partner-profile-pic-An.jpg"" class="md-avatar" alt="{{message.who}}">
                             <div class="md-list-item-text">
-                              <h4 ng-click="test()">{{moment.name}}</h4>
+                              <h4>{{moment.name}}</h4>
                               <h4>{{moment.notes}}</h4>
                               <p>
                                 {{moment.image}}
@@ -124,38 +124,29 @@
               <md-icon>person</md-icon>
             </md-tab-label>
             <md-tab-body>
-            <md-divider></md-divider>
-                <div>
-                   <md-button ng-click="test()">
-                       <h4>Profile Picture</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>Full Name</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>Charters ID</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>My QR Code</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>Gender</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>Region</h4>
-                   </md-button>
-                   <br>
-                   <md-button ng-click="test()">
-                       <h4>Status</h4>
-                   </md-button>
+              <div>
+              <md-divider></md-divider>
+                  <md-content>
+                    <section>
+                      <md-list layout-padding>
+                        <md-list-item class="md-3-line" ng-repeat="menu in profileMenu" ng-click="test()">
+                            <div class="md-list-item-text">
+                              <h4>{{menu.menu}}</h4>
+                              <h4>{{menu.iamge}}</h4>
+                              <h4>{{menu.name}}</h4>
+                              <h4>{{menu.id}}</h4>
+                              <h4>{{menu.qr}}</h4>
+                              <h4>{{menu.gender}}</h4>
+                              <h4>{{menu.region}}</h4>
+                              <h4>{{menu.status}}</h4>
+                            </div>
+                        </md-list-item>
+                      </md-list>
+                    </section>
+                  </md-content>
                 </div>
             </md-tab-body>
-            </md-tab>
+            </md-tab> 
         </md-tabs>
     </md-content>
 </md-content>

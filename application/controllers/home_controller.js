@@ -69,4 +69,35 @@ application.controller('HomeController', ['$scope', '$location',
                 notes: " and the end"
               },
             ];
+            
+            $scope.profileMenu = [
+              {
+                menu : 'Profile Picture',
+                face : imagePath,
+              },
+              {
+                menu : 'Full Name',
+                name : 'Mohammad Hafiz Amiruddin',
+              },
+              {
+                menu : 'Charters ID',
+                id : '123456789',
+              },
+              {
+                menu : 'My QR Code',
+                qr : 'Charters ID',
+              },
+              {
+                menu : 'Gender',
+                gender: 'Male',
+              },
+              {
+                menu : 'Region',
+                region : 'Islam',
+              },
+              {
+                menu : 'Status',
+                status : 'Nice to meet you',
+              },
+            ];
     }]);
