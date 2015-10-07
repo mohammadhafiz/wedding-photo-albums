@@ -1,3 +1,4 @@
+<script src="bower_components/nvd3/nv.d3.js"></script>
 <md-content flex
     layout="row"
     md-theme="teal">
@@ -132,6 +133,15 @@
                     </section>
                   </md-content>
                 </div>
+            </md-tab-body>
+            </md-tab>
+            
+            <md-tab>
+            <md-tab-label>
+              <md-icon>insert_chart</md-icon>
+            </md-tab-label>
+            <md-tab-body>
+              <nvd3 options="options" data="data"></nvd3>
             </md-tab-body>
             </md-tab>
         </md-tabs>

@@ -2,6 +2,7 @@ var application = angular.module('application', [
     'm',
     'ngAnimate',
     'ngAria',
+    'angularChart',
     'ngMaterial',
     'ngMessageFormat',
     'ngMessages',
@@ -9,7 +10,8 @@ var application = angular.module('application', [
     'ngRoute',
     'yaru22.angular-timeago',
     'ngtimeago',
-    'angularMoment', 
+    'angularMoment',
+    'nvd3',
     'ngSanitize',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache
