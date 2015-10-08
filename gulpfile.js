@@ -50,6 +50,7 @@ var settings = {
         'stylesheets/application.css',
         'bower_components/c3/c3.css',
         'bower_components/nvd3/nv.d3.css',
+        'bower_components/angular-google-chart/style.css',
     ],
     templates: [
         'templates/**/*.html',
@@ -82,6 +83,7 @@ var settings = {
             'bower_components/angular-chart/angular-chart.js',
             'bower_components/nvd3/nv.d3.js',
             'bower_components/angular-nvd3/dist/angular-nvd3.js',
+            'bower_components/angular-google-chart/ng-google-chart.js',
         ],
         stylesheets: [
             'bower_components/roboto-fontface/css/roboto-fontface.css',

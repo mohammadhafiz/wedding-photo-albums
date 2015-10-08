@@ -12,6 +12,8 @@ var application = angular.module('application', [
     'ngtimeago',
     'angularMoment',
     'nvd3',
+    'googlechart', 
+    'googlechart-docs',
     'ngSanitize',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache

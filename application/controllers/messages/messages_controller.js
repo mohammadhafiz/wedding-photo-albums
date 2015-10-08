@@ -122,54 +122,39 @@ application.controller('MessagesController', ['$location', '$mdSidenav', '$scope
               },
             ];
             
-            $scope.options = {
-            chart: {
-                type: 'pieChart',
-                height: 500,
-                x: function(d){return d.key;},
-                y: function(d){return d.y;},
-                showLabels: true,
-                transitionDuration: 500,
-                labelThreshold: 0.01,
-                legend: {
-                    margin: {
-                        top: 5,
-                        right: 35,
-                        bottom: 5,
-                        left: 0
-                    }
-                }
-            }
-        };
+            $scope.chartObject = {};
+    
+            $scope.chartObject.type = "BarChart";
+            
+            $scope.onions = [
+                {v: "Onions"},
+                {v: 3},
+            ];
 
-        $scope.data = [
-            {
-                key: "One",
-                y: 5
-            },
-            {
-                key: "Two",
-                y: 2
-            },
-            {
-                key: "Three",
-                y: 9
-            },
-            {
-                key: "Four",
-                y: 7
-            },
-            {
-                key: "Five",
-                y: 4
-            },
-            {
-                key: "Six",
-                y: 3
-            },
-            {
-                key: "Seven",
-                y: .5
-            }
-        ];
+            $scope.chartObject.data = {"cols": [
+                {id: "t", label: "Topping", type: "string"},
+                {id: "s", label: "Slices", type: "number"}
+            ], "rows": [
+                {c: [
+                    {v: "Mushrooms"},
+                    {v: 3},
+                ]},
+                {c: $scope.onions},
+                {c: [
+                    {v: "Olives"},
+                    {v: 31}
+                ]},
+                {c: [
+                    {v: "Zucchini"},
+                    {v: 1},
+                ]},
+                {c: [
+                    {v: "Pepperoni"},
+                    {v: 2},
+                ]}
+            ]};
+
+            $scope.chartObject.options = {
+                'title': 'How Much Pizza I Ate Last Night'
+            };
     }]);
