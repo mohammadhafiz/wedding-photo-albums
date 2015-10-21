@@ -9,6 +9,7 @@ var application = angular.module('application', [
     'ngRoute',
     'yaru22.angular-timeago',
     'ngSanitize',
+    'pouchdb',
     'pascalprecht.translate', // angular-translate
     'application.templates', // application templates cache
 ]);
@@ -98,6 +99,6 @@ application.config(['$locationProvider', '$routeProvider',
             .hashPrefix('!#');
 
         $routeProvider.otherwise({
-                redirectTo: '/home',
+                redirectTo: '/login',
             });
     }]);

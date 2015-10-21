@@ -74,6 +74,8 @@ var settings = {
             'bower_components/angular-sanitize/angular-sanitize.js',
             'bower_components/angular-translate/angular-translate.js',
             'bower_components/angular-timeago/dist/angular-timeago.js',
+            'bower_components/angular-pouchdb/angular-pouchdb.js',
+            'bower_components/pouchdb/dist/pouchdb.min.js',
         ],
         stylesheets: [
             'bower_components/roboto-fontface/css/roboto-fontface.css',

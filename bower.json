@@ -20,6 +20,7 @@
   "dependencies": {
     "angular-timeago": "~0.2.4",
     "angular-moment": "~0.10.3",
-    "angular-chart": "~0.3.2"
+    "angular-chart": "~0.3.2",
+    "angular-pouchdb": "~4.0.0"
   }
 }

@@ -100,4 +100,17 @@ application.controller('HomeController', ['$scope', '$location',
                 status : 'Nice to meet you',
               },
             ];
-    }]);
+            
+    var db = new PouchDB('http://192.168.1.155:5984/chat');
+    
+    db.put(function callback(err, result) 
+    {
+      if (!err) {
+        console.log('Registration successfull!');
+      }
+    });
+    
+    db.info().then(function (info) {
+      console.log(info);
+    })
+}]);
