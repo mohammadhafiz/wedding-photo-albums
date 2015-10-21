@@ -1,5 +1,5 @@
-application.controller('MessagesController', ['$location', '$mdSidenav', '$scope', 'amTimeAgoConfig',
-    function($location, $mdSidenav, $scope, amTimeAgoConfig)
+application.controller('MessagesController', ['$location', '$mdSidenav', '$scope',
+    function($location, $mdSidenav, $scope)
     {
         withoutSuffix: true
         
